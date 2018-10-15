@@ -57,11 +57,24 @@
     <div class="row clearfix">
         <div class="">
             <div data-role="content" class="MAIN MYSET ui-content" role="main" style="    padding: 0!important;">
-                <header><nav><ul><li class="h"><a rel="external" class="home" href="#" id="conf_FT">足球</a></li>
-                    <li><a rel="external" class="brewery" href="#" id="conf_BK">篮球</a></li>
-                    <li><a rel="external" class="brewery" href="#" id="conf_OP">综合球类</a></li>
-                    <li><a rel="external" class="brewery" href="#" id="conf_FS">冠军</a></li>
-                </ul></nav></header><div id="FT_div" style="">
+
+                <nav>
+                    <ul class="nav nav-tabs">
+                        <li  id="conf_FT" onclick="getData(this.id);">
+                            <a href="#">足球</a>
+                        </li>
+                        <li class="disabled" id="conf_BK" onclick="getData(this.id);">
+                            <a href="#">篮球</a>
+                        </li>
+                        <li class="disabled" id="conf_OP" onclick="getData(this.id);">
+                            <a href="#" >综合球类</a>
+                        </li>
+                        <li class="disabled" id="conf_FS" onclick="getData(this.id);">
+                            <a href="#" >冠军</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div id="FT_div" style="">
                 <h4>让球 &amp; 大小 &amp; 单双</h4>
                 <h5 class="commset">退水设定</h5>
                 <table border="0" cellspacing="0" cellpadding="0" class="comm_tab td25"><tbody><tr><th>A</th>
@@ -312,6 +325,29 @@
 </body>
 </html>
 <script>
+    function getData(id) {
+        if ( id === 'conf_FT') {
+            $("#"+id).removeClass("disabled");
+            $("#conf_BK").addClass("disabled");
+            $("#conf_OP").addClass("disabled");
+            $("#conf_FS").addClass("disabled");
+        } else if ( id === 'conf_BK') {
+            $("#"+id).removeClass("disabled");
+            $("#conf_FT").addClass("disabled");
+            $("#conf_OP").addClass("disabled");
+            $("#conf_FS").addClass("disabled");
+        } else if ( id === 'conf_OP') {
+            $("#"+id).removeClass("disabled");
+            $("#conf_FT").addClass("disabled");
+            $("#conf_BK").addClass("disabled");
+            $("#conf_FS").addClass("disabled");
+        } else {
+            $("#"+id).removeClass("disabled");
+            $("#conf_BK").addClass("disabled");
+            $("#conf_OP").addClass("disabled");
+            $("#conf_FT").addClass("disabled");
+        }
+    }
     function anotice() {
         alert("该功能即将上线，敬请期待！");
         return false;
