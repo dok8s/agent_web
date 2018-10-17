@@ -26,14 +26,13 @@
                         <li><a href="index.html" class="active">首页</a></li>
                         <li><a href="announcement.html">公告</a></li>
                         <li><a href="account.html">账号管理</a></li>
-                        <li><a onclick="anotice();">报表</a></li>
-                        <li><a  href="contact.html">联系我们</a></li>
-                        <li><a onclick="anotice();">在线客服</a></li>
-                        <li><a onclick="anotice();">密码恢复</a></li>
-                        <li><a onclick="anotice();">更改密码</a></li>
+                        <li><a onclick="notice();">报表</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
+                        <li><a onclick="notice();">在线客服</a></li>
+                        <li><a onclick="recovery();">密码恢复</a></li>
+                        <li><a href="edit_passwd.html">更改密码</a></li>
                         <li><a href="new_url.html">最新网址</a></li>
-                        <li><a onclick="anotice();">退出</a></li>
-
+                        <li><a href="login.html">退出</a></li>
                     </ul>
                 </div>
             </div>
@@ -172,5 +171,9 @@
 
     function del() {
         document.getElementById("query").value = "";
+    }
+    function recovery() {
+        alert("已恢复，初始密码为123456！");
+        window.location.href = "index.html";
     }
 </script>

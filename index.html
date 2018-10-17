@@ -14,8 +14,6 @@
 		<link rel="stylesheet" href="assets/css/style.css">
 	</head>
 	<body>
-         
-
 		<header style="background: #950f0f;">
 			<div class="container">
 				<div class="row">
@@ -33,10 +31,10 @@
 								<li><a onclick="notice();">报表</a></li>
 								<li><a href="contact.html">联系我们</a></li>
 								<li><a onclick="notice();">在线客服</a></li>
-								<li><a onclick="notice();">密码恢复</a></li>
-								<li><a onclick="notice();">更改密码</a></li>
+								<li><a onclick="recovery();">密码恢复</a></li>
+								<li><a href="edit_passwd.html">更改密码</a></li>
 								<li><a href="new_url.html">最新网址</a></li>
-								<li><a onclick="notice();">退出</a></li>
+								<li><a href="login.html">退出</a></li>
 
 							</ul>
 						</div>
@@ -86,13 +84,13 @@
 			</div>
 			<hr>
 			<div class="row">
-				<a onclick="notice();">
+				<a onclick="recovery();">
 				<div class="col-xs-6" align="center" style="background-color: #e5e5e5;border-right:2px solid #ffffff;">
 					<span class="glyphicon glyphicon-repeat" style="color: #000;font-size: 60px;" aria-hidden="true"></span>
 				</div>
 				</a>
 
-				<a onclick="notice();">
+				<a href="edit_passwd.html">
 				<div class="col-xs-6" align="center" style="background-color: #e5e5e5;border-left:2px solid #ffffff;">
 					<span class="glyphicon glyphicon-lock" style="color: #000;font-size: 60px;" aria-hidden="true"></span>
 				</div>
@@ -106,13 +104,13 @@
 			</div>
 			<hr>
 			<div class="row">
-				<a onclick="notice();">
+				<a href="new_url.html">
 				<div class="col-xs-6" align="center" style="background-color: #e5e5e5;border-right:2px solid #ffffff;">
 					<span class="glyphicon glyphicon-link" style="color: #000;font-size: 60px;" aria-hidden="true"></span>
 				</div>
 				</a>
 
-				<a onclick="notice();">
+				<a href="login.html">
 				<div class="col-xs-6" align="center" style="background-color: #e5e5e5;border-left:2px solid #ffffff;">
 					<span class="glyphicon glyphicon-log-out" style="color: #000;font-size: 60px;" aria-hidden="true"></span>
 				</div>
@@ -144,4 +142,8 @@
 	    alert("该功能展示未开放，敬请期待！");
 	    return false;
     }
+    function recovery() {
+        alert("已恢复，初始密码为123456！");
+        window.location.href = "index.html";
+	}
 </script>
